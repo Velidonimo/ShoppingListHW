@@ -11,7 +11,7 @@ object ShopListRepositoryImpl: ShopListRepository{
 
     init {
         for (i in 0 until 10)
-            shopList.add(ShopItem(i.toString(), i, true))
+            addShopItem(ShopItem(i.toString(), i, true))
     }
 
     override fun addShopItem(shopItem: ShopItem) {
