@@ -14,11 +14,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var testEnabled = true
         mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
         mainViewModel.shopList.observe(this){
             Log.d("MyMsg", it.toString())
-        }
 
-        mainViewModel.getShopList()
+            if (testEnabled){
+                testEnabled = false
+                val item = it[0]
+                mainViewModel.changeEnableStateForShopItem(item)
+                mainViewModel.removeShopItem(it[0])
+            }
+
+        }
     }
 }
