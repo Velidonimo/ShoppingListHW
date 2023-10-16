@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="@color/green_enabled"
-        android:padding="4dp">
+        android:padding="8dp">
 
         <TextView
             android:id="@+id/tv_item_name"
@@ -27,7 +27,7 @@
             android:textStyle="bold"
             android:textColor="@color/white"
             tools:text="SDHGASDDH"
-            android:textSize="16sp"/>
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/tv_item_count"
@@ -36,7 +36,7 @@
             android:textStyle="bold"
             android:textColor="@color/white"
             tools:text="10.5"
-            android:textSize="16sp"/>
+            android:textSize="20sp"/>
 
     </LinearLayout>
 
