@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.a04shoppinglisthw.domain.ShopItem
 import com.example.a04shoppinglisthw.domain.ShopListRepository
+import java.util.Random
 
 object ShopListRepositoryImpl: ShopListRepository{
 
@@ -14,7 +15,7 @@ object ShopListRepositoryImpl: ShopListRepository{
 
     init {
         for (i in 0 until 20)
-            addShopItem(ShopItem("Name $i", i*i, true))
+            addShopItem(ShopItem("Name $i", i*i, Random().nextBoolean()))
     }
 
     override fun addShopItem(shopItem: ShopItem) {
